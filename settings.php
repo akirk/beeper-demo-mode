@@ -55,18 +55,6 @@ $fake_last    = $fake_names['last']  ?: [ 'Smith', 'Johnson', 'Williams', 'Brown
 		<button type="button" id="bdm-clear-names" class="button"><?php esc_html_e( 'Clear name overrides', 'beeper-demo-mode' ); ?></button>
 	</p>
 
-	<hr>
-
-	<h2><?php esc_html_e( 'Developer Notes', 'beeper-demo-mode' ); ?></h2>
-	<p><?php esc_html_e( 'Demo mode can also be enabled without this plugin by hooking the filter directly:', 'beeper-demo-mode' ); ?></p>
-	<pre style="background:#f0f0f0;padding:12px;display:inline-block;">add_filter( 'personal_crm_demo_mode', '__return_true' );</pre>
-
-	<p><?php esc_html_e( 'To replace the fake name lists:', 'beeper-demo-mode' ); ?></p>
-	<pre style="background:#f0f0f0;padding:12px;display:inline-block;">add_filter( 'beeper_demo_names', function( $names ) {
-    $names['first'] = [ 'Jean', 'Pierre', 'Marie', ... ];
-    $names['last']  = [ 'Dupont', 'Martin', 'Bernard', ... ];
-    return $names;
-} );</pre>
 </div>
 
 <style>
