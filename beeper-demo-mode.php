@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Beeper Demo Mode
- * Description: Anonymizes names and images across Personal CRM and related plugins for screenshots and demos. Enable via Settings → Beeper Demo Mode, or apply the personal_crm_demo_mode filter directly.
+ * Description: Anonymizes names and images across Personal CRM and related plugins for screenshots and demos. Enable via Settings → Beeper Demo Mode, or apply the beeper_demo_mode filter directly.
  * Version:     1.0.0
  */
 
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Activate demo mode when the option is enabled.
  */
-add_filter( 'personal_crm_demo_mode', function ( $enabled ) {
+add_filter( 'beeper_demo_mode', function ( $enabled ) {
 	return $enabled || (bool) get_option( 'demo_mode_enabled', false );
 } );
 
@@ -20,12 +20,12 @@ add_filter( 'personal_crm_demo_mode', function ( $enabled ) {
  * Provide the default fake name lists.
  *
  * Override via:
- *   add_filter( 'personal_crm_demo_names', function( $names ) {
+ *   add_filter( 'beeper_demo_names', function( $names ) {
  *       $names['first'] = [ 'Jean', 'Pierre', ... ];
  *       return $names;
  *   } );
  */
-add_filter( 'personal_crm_demo_names', function ( $names ) {
+add_filter( 'beeper_demo_names', function ( $names ) {
 	return [
 		'first' => [
 			_x( 'Alice',  'demo mode fake first name', 'beeper-demo-mode' ),
@@ -78,11 +78,11 @@ add_filter( 'personal_crm_demo_names', function ( $names ) {
  * Provide the placeholder image URL for demo mode.
  *
  * Override via:
- *   add_filter( 'personal_crm_demo_placeholder_image', function( $url ) {
+ *   add_filter( 'beeper_demo_placeholder_image', function( $url ) {
  *       return 'https://example.com/my-placeholder.png';
  *   } );
  */
-add_filter( 'personal_crm_demo_placeholder_image', function ( $url ) {
+add_filter( 'beeper_demo_placeholder_image', function ( $url ) {
 	return $url ?: plugin_dir_url( __FILE__ ) . 'placeholder.svg';
 } );
 

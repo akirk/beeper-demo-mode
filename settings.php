@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $beeper_token = apply_filters( 'personal_crm_beeper_token', '' );
-$fake_names   = apply_filters( 'personal_crm_demo_names', [ 'first' => [], 'last' => [] ] );
+$fake_names   = apply_filters( 'beeper_demo_names', [ 'first' => [], 'last' => [] ] );
 $fake_first   = $fake_names['first'] ?: [ 'Alice', 'Bob', 'Carol', 'David', 'Emma', 'Frank', 'Grace', 'Henry', 'Isabel', 'James', 'Kate', 'Liam', 'Maya', 'Noah', 'Olivia', 'Peter', 'Quinn', 'Rachel', 'Sam', 'Tara' ];
 $fake_last    = $fake_names['last']  ?: [ 'Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Wilson', 'Moore', 'Taylor', 'Anderson', 'Thomas', 'Jackson', 'White', 'Harris', 'Martin', 'Thompson', 'Young', 'Clark' ];
 ?>
@@ -62,7 +62,7 @@ $fake_last    = $fake_names['last']  ?: [ 'Smith', 'Johnson', 'Williams', 'Brown
 	<pre style="background:#f0f0f0;padding:12px;display:inline-block;">add_filter( 'personal_crm_demo_mode', '__return_true' );</pre>
 
 	<p><?php esc_html_e( 'To replace the fake name lists:', 'beeper-demo-mode' ); ?></p>
-	<pre style="background:#f0f0f0;padding:12px;display:inline-block;">add_filter( 'personal_crm_demo_names', function( $names ) {
+	<pre style="background:#f0f0f0;padding:12px;display:inline-block;">add_filter( 'beeper_demo_names', function( $names ) {
     $names['first'] = [ 'Jean', 'Pierre', 'Marie', ... ];
     $names['last']  = [ 'Dupont', 'Martin', 'Bernard', ... ];
     return $names;
