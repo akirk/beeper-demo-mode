@@ -11,6 +11,11 @@ A WordPress plugin that anonymizes names and images from the Beeper client used 
 - Deterministic name assignment (same real name always maps to the same fake name)
 - Toggle via **Settings → Beeper Demo Mode** or programmatically via a WordPress filter
 
+## Screenshots
+<img width="2324" height="1252" alt="Screenshot 2026-03-17 at 13 42 39" src="https://github.com/user-attachments/assets/e9c623cd-b03d-4395-a012-21607787e752" />
+
+<img width="905" height="514" alt="Screenshot 2026-03-17 at 13 44 47" src="https://github.com/user-attachments/assets/a57d96b9-85c8-4295-a61f-73664e7da432" />
+
 ## Usage
 
 Enable demo mode from the WordPress admin under **Settings → Beeper Demo Mode**, or activate it directly in code:
