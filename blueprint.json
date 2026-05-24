@@ -1,0 +1,22 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Beeper Demo Mode",
+		"description": "Anonymize names and images from the Beeper client",
+		"author": "Alex Kirk"
+	},
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/beeper-demo-mode",
+				"ref": "main",
+				"refType": "branch"
+			},
+			"options": {
+				"targetFolderName": "beeper-demo-mode"
+			}
+		}
+	]
+}
